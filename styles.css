@@ -537,10 +537,10 @@ h3 {
 .task-workspace {
   position: relative;
   display: grid;
-  min-height: 610px;
+  min-height: 540px;
   grid-template-columns: minmax(250px, 0.72fr) minmax(540px, 1.28fr);
   gap: 24px;
-  padding: 26px;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--paper);
@@ -581,12 +581,12 @@ h3 {
 
 .target-frame {
   display: grid;
-  width: min(100%, 310px);
+  width: min(100%, 280px);
   aspect-ratio: 1 / 1;
   place-items: center;
   align-self: center;
   justify-self: center;
-  padding: 28px;
+  padding: 22px;
   border: 2px solid var(--green);
   border-radius: 6px;
   background: var(--green-soft);
@@ -610,9 +610,9 @@ h3 {
 .candidate-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
   align-content: center;
-  padding: 16px 0;
+  padding: 12px 0;
 }
 
 .candidate-button {
@@ -621,7 +621,7 @@ h3 {
   min-width: 0;
   aspect-ratio: 1 / 1;
   place-items: center;
-  padding: 18px;
+  padding: 14px;
   border: 2px solid var(--line);
   border-radius: 6px;
   background: #fbfcfb;
@@ -1476,7 +1476,7 @@ dialog::backdrop {
 .preference-question {
   min-width: 0;
   margin: 0;
-  padding: 26px 0 30px;
+  padding: 22px 0 24px;
   border: 0;
   border-bottom: 1px solid var(--line);
 }
@@ -1489,7 +1489,7 @@ dialog::backdrop {
   display: grid;
   width: 100%;
   gap: 7px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   padding: 0;
   font-size: 16px;
   font-weight: 800;
@@ -1504,22 +1504,22 @@ dialog::backdrop {
 .preference-options {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .preference-option {
   display: grid;
-  min-height: 112px;
+  min-height: 64px;
   grid-template-columns: 32px minmax(0, 1fr);
-  align-items: start;
-  gap: 12px;
-  padding: 18px;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
   border: 2px solid var(--line);
   border-radius: 6px;
   color: var(--ink-soft);
   background: var(--paper);
   font-size: 13px;
-  line-height: 1.75;
+  line-height: 1.65;
   cursor: pointer;
   transition: border-color 120ms ease, background 120ms ease;
 }
@@ -1754,6 +1754,10 @@ dialog::backdrop {
     padding: 16px;
   }
 
+  .target-zone {
+    min-height: 260px;
+  }
+
   .candidate-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
@@ -1868,7 +1872,8 @@ dialog::backdrop {
   }
 
   .preference-option {
-    min-height: 0;
+    min-height: 58px;
+    padding: 12px 14px;
   }
 
   .context-actions {
