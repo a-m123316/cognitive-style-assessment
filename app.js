@@ -111,6 +111,222 @@ const combinedLearningProfiles = {
   },
 };
 
+const learningStrategyLibrary = {
+  reflective: {
+    dimension: "决策节奏",
+    title: "审慎比较与证据复核",
+    summary: "把较充分的思考转化为有步骤的证据比较，而不是单纯延长作答时间。",
+    actions: [
+      "作答前先明确判断标准，再逐项比较不同方案。",
+      "用一句话写出选择依据，并说明为什么排除其他选项。",
+      "在关键结论提交前复查证据、条件和可能遗漏。",
+    ],
+    resources: [
+      "关键问题先提供观察、规划和证据整理区，不用抢答式倒计时。",
+      "设置比较表、自我解释框和提交前检查清单。",
+      "高难任务允许根据反馈修订一次，并用阶段节点防止思考无限拖延。",
+    ],
+    before: "阅读目标与判断标准，预测本节最需要核验的问题。",
+    during: "比较方案、记录证据，并在关键步骤回答“为什么”。",
+    after: "复查结论与证据是否一致，再提交最终答案。",
+    avoid: ["避免以抢答速度作为奖励。", "避免只给结论而不保留比较、解释和复核时间。"],
+    sourceIds: ["viator", "ault-problem"],
+  },
+  impulsive: {
+    dimension: "决策节奏",
+    title: "自我言语与系统扫描",
+    summary: "用固定的“停—看—比—说—查”程序抑制未经核验的快速反应。",
+    actions: [
+      "先对自己说出任务目标和需要寻找的关键信息。",
+      "按固定顺序扫描材料或选项，逐项比较关键特征。",
+      "选择答案前指出至少一条证据，提交前再检查一次。",
+    ],
+    resources: [
+      "把复杂任务拆成短步骤，一次只要求完成一个判断。",
+      "先要求观察或选择证据，再开放最终答案按钮。",
+      "反馈不仅说明对错，还指出漏看的线索，并提供一次纠错机会。",
+    ],
+    before: "按“停—看—比—说—查”清单明确任务和观察顺序。",
+    during: "逐项扫描并选择证据，用一句话说明当前判断。",
+    after: "延迟最终提交，检查遗漏线索后再确认答案。",
+    avoid: ["避免一键猜测、连续快速点击和速度奖励。", "避免只反馈对错而不提示检查方法。"],
+    sourceIds: ["meichenbaum", "egeland", "ault-scan"],
+  },
+  efficient: {
+    dimension: "决策节奏",
+    title: "保持流畅并核验关键节点",
+    summary: "保留快速且准确的加工优势，只在高难度或高风险节点增加必要复核。",
+    actions: [
+      "用较快节奏完成熟悉内容，不人为拖慢全部学习过程。",
+      "在关键结论处标注信心程度和核心证据。",
+      "对低信心或高难度问题执行一次完整复核。",
+    ],
+    resources: [
+      "基础内容采用紧凑节奏，并提供可选的挑战分支。",
+      "只在关键节点加入证据确认和信心判断。",
+      "允许根据表现跳过重复练习，同时保留阶段性自我测试。",
+    ],
+    before: "快速浏览目标，识别需要重点核验的高难内容。",
+    during: "保持流畅推进，只对低信心判断展开详细检查。",
+    after: "完成一次关键证据复核和无提示自我测试。",
+    avoid: ["避免因为作答快就直接视为冲动型。", "避免用重复等待和低难练习破坏高效节奏。"],
+    sourceIds: ["viator", "ault-problem"],
+  },
+  mixed: {
+    dimension: "决策节奏",
+    title: "任务澄清与分段纠错",
+    summary: "先确认是否理解任务，再通过示例、分段练习和错误诊断建立有效策略。",
+    actions: [
+      "先复述任务要求，并借助一个示例确认判断标准。",
+      "把复杂任务分成较短步骤，每步只处理一个信息关系。",
+      "根据错误类型选择提示，修正后再进入下一阶段。",
+    ],
+    resources: [
+      "开头提供完整示例和任务要求检查。",
+      "减少单屏信息量，提供逐级提示和针对性纠错反馈。",
+      "掌握后逐步撤去提示，避免长期依赖支架。",
+    ],
+    before: "用示例确认任务要求、判断标准和操作方法。",
+    during: "分段完成任务，并根据错误反馈及时修正策略。",
+    after: "独立完成一个相似问题，确认能否脱离提示。",
+    avoid: ["避免只增加作答时间却不分析错误来源。", "避免在当前步骤尚未理解时继续增加难度。"],
+    sourceIds: ["viator", "ault-problem"],
+  },
+  global: {
+    dimension: "知识组织",
+    title: "全局预览与关系建构",
+    summary: "先建立知识全貌，再把局部内容放回整体框架，并主动寻找跨主题联系。",
+    actions: [
+      "学习章节前先浏览目标、结构和最终要解决的问题。",
+      "用概念图连接新知识、已有知识和实际应用。",
+      "尝试多种解决方案，并思考“如果条件改变会怎样”。",
+    ],
+    resources: [
+      "开头生成一屏式知识地图，标明本节内容在课程中的位置。",
+      "提供半成品概念图，让学生补节点、连关系并解释联系。",
+      "加入跨主题案例、开放应用和多方案比较任务。",
+    ],
+    before: "先浏览完整知识地图、学习目标和应用情境。",
+    during: "每完成一个模块，就把新内容连接回整体框架。",
+    after: "重建概念图，并说明至少一个跨主题或实际应用联系。",
+    avoid: ["避免直接进入彼此孤立的细节。", "避免只允许唯一固定路径和唯一解决方法。"],
+    sourceIds: ["felder-1988", "felder-strategies"],
+  },
+  sequential: {
+    dimension: "知识组织",
+    title: "逻辑排序与分步自我解释",
+    summary: "按照先修关系逐步推进，补足中间环节，并解释每一步为什么成立。",
+    actions: [
+      "把学习内容重新整理成有编号的逻辑提纲。",
+      "遇到跳步时主动补出中间条件、计算或推理。",
+      "每一步完成后说明理由，并通过阶段练习逐步累积。",
+    ],
+    resources: [
+      "生成编号学习路径、先修知识提示和逐步展开的完整例题。",
+      "在关键步骤后加入“为什么这样做”和“下一步是什么”。",
+      "用阶段性自我测试检查掌握情况，结尾再补充整体总结。",
+    ],
+    before: "确认先修知识，并查看本节编号学习路径。",
+    during: "按顺序完成步骤，为每一步补充理由和中间过程。",
+    after: "脱离示例复现完整流程，再总结各步骤之间的关系。",
+    avoid: ["避免跳过中间步骤或突然改变讲解顺序。", "避免前一步尚未掌握就直接进入后续内容。"],
+    sourceIds: ["felder-1988", "felder-strategies"],
+  },
+  visual: {
+    dimension: "信息表征",
+    title: "图形转换与视觉建模",
+    summary: "不只观看图片，而是主动把文字转成图、补全图示并用视觉关系解释知识。",
+    actions: [
+      "把文字信息转换成流程图、时间线、示意图或概念图。",
+      "给图示添加标签、箭头和关系说明。",
+      "学习后凭记忆重画核心结构，再与标准图进行比较。",
+    ],
+    resources: [
+      "优先生成带标注的流程图、示意图、图表和视觉比较。",
+      "提供缺少节点或箭头的半成品图，让学生主动补全。",
+      "图示配保留简短文字和可访问说明，重点突出知识关系而非装饰。",
+    ],
+    before: "观察总览图，找出主要对象、阶段和关系。",
+    during: "补全或标注图示，并把关键文字转换成视觉结构。",
+    after: "凭记忆重画核心图，再用简短语言解释图中关系。",
+    avoid: ["避免堆叠过多图片和无关装饰。", "避免只展示完整成品图而没有补图、画图或标注活动。"],
+    sourceIds: ["felder-strategies", "fiorella", "mayer-massa"],
+  },
+  verbal: {
+    dimension: "信息表征",
+    title: "自主总结与讲解输出",
+    summary: "通过自己的语言重新组织知识，并以复述、自我解释或教给他人的方式输出。",
+    actions: [
+      "用自己的话写出简短总结和层级提纲。",
+      "对关键概念、步骤和因果关系进行口头或书面解释。",
+      "以“教给一位初学者”的方式完成复述，并生成自测问题。",
+    ],
+    resources: [
+      "生成结构清楚的短段讲解、定义、示例和关键词提纲。",
+      "每个模块加入一句话总结、自我解释或教回任务。",
+      "保留必要图示，但为其提供完整语言说明和关系解释。",
+    ],
+    before: "阅读关键词提纲，并用一句话预测本节核心问题。",
+    during: "用自己的话解释概念和步骤，及时形成小结。",
+    after: "完成教回式复述，并根据内容提出两个自测问题。",
+    avoid: ["避免只给图示而没有语言解释。", "避免连续呈现缺少层次的大段文字或长时间讲述。"],
+    sourceIds: ["felder-strategies", "fiorella", "mayer-massa"],
+  },
+};
+
+const learningStrategyReferences = {
+  viator: {
+    citation: "Viator, Wu, & Viator (2022). MFFT-2021 的效度与信度研究。",
+    note: "界定成人沉思—冲动的速度与准确性特征。",
+    url: "https://doi.org/10.3389/fpsyg.2022.977808",
+  },
+  "ault-scan": {
+    citation: "Ault, Crawford, & Jeffrey (1972). 不同概念节奏类型的视觉扫描策略。",
+    note: "支持将系统扫描与比较过程纳入任务设计。",
+    url: "https://doi.org/10.2307/1127527",
+  },
+  "ault-problem": {
+    citation: "Ault (1973). 四类概念节奏学习者的问题解决策略。",
+    note: "说明快速准确与慢速高错不应被强行归入沉思或冲动。",
+    url: "https://doi.org/10.2307/1128045",
+  },
+  meichenbaum: {
+    citation: "Meichenbaum & Goodman (1971). 冲动型儿童的自我言语训练。",
+    note: "为“说出步骤—调节行为”的自我指导策略提供依据。",
+    url: "https://doi.org/10.1037/h0030773",
+  },
+  egeland: {
+    citation: "Egeland (1974). 冲动型儿童的有效扫描训练。",
+    note: "支持按固定顺序观察、比较并检查关键信息。",
+    url: "https://doi.org/10.2307/1127763",
+  },
+  "felder-1988": {
+    citation: "Felder & Silverman (1988). Learning and Teaching Styles in Engineering Education.",
+    note: "提出整体—序列和视觉—言语的教学组织原则。",
+    url: "https://engr.ncsu.edu/wp-content/uploads/drive/1QP6kBI1iQmpQbTXL-08HSl0PwJ5BYnZW/1988-LS-plus-note.pdf",
+  },
+  "felder-strategies": {
+    citation: "Felder & Soloman. Learning Styles and Strategies.",
+    note: "直接给出整体、序列、视觉和言语倾向的学习策略建议。",
+    url: "https://engr.ncsu.edu/wp-content/uploads/drive/1WPAfj3j5o5OuJMiHorJ-lv6fON1C8kCN/styles.pdf",
+  },
+  fiorella: {
+    citation: "Fiorella & Mayer (2016). Eight Ways to Promote Generative Learning.",
+    note: "将总结、概念图、绘图、自我测试和自我解释等作为生成式学习活动。",
+    url: "https://doi.org/10.1007/s10648-015-9348-9",
+  },
+  "mayer-massa": {
+    citation: "Mayer & Massa (2003). Three Facets of Visual and Verbal Learners.",
+    note: "区分信息偏好、认知风格和能力，避免把偏好解释成固定能力。",
+    url: "https://doi.org/10.1037/0022-0663.95.4.833",
+  },
+  pashler: {
+    citation: "Pashler, McDaniel, Rohrer, & Bjork (2008). Learning Styles: Concepts and Evidence.",
+    note: "提醒不能宣称匹配学习风格必然提高成绩，应把本方案作为待验证的差异化支架。",
+    url: "https://doi.org/10.1111/j.1539-6053.2009.01038.x",
+  },
+};
+
 const ilsContexts = [
   {
     id: "new-course",
@@ -684,69 +900,134 @@ function combinedDimensionItem(number, title, profile, detail) {
   `;
 }
 
-function composeExtendedGuidance(decisionTone, organizationTone, representationTone) {
-  const decisionRules = {
-    efficient: {
-      suitable: "保持较高效的理解和判断节奏，并在高难度或关键任务提交前设置一次最终复核，让速度与准确性同时得到发挥。",
-      avoid: "避免仅因作答较快就将学生视为冲动型，也不必人为拖慢所有学习任务或反复增加无意义的等待。",
-    },
-    mixed: {
-      suitable: "适当降低单次任务的信息负荷，先用示例确认任务要求，再分段练习并针对错误原因给予具体反馈。",
-      avoid: "避免只延长作答时间却不分析错误来源，也避免在当前步骤尚未理解时继续增加难度或加快进度。",
-    },
-  };
-  const organizationRules = {
-    global: {
-      suitable: "开始学习时先呈现整体目标、知识框架和主题之间的联系，并在学习过程中反复回到整体结构进行总结。",
-      avoid: "避免直接进入彼此孤立的细节，使学生无法判断当前内容在整个知识体系中的位置。",
-    },
-    sequential: {
-      suitable: "按照先修知识和逻辑关系，用编号步骤、分步示例和阶段检查依次展开内容，并在最后补充整体总结。",
-      avoid: "避免跳过中间步骤、突然改变讲解顺序，或在前一步尚未掌握时直接进入后续内容。",
-    },
-  };
-  const representationRules = {
-    visual: {
-      suitable: "优先使用带标注的流程图、步骤图、图表和示意图呈现关键信息，同时保留必要的简短文字说明。",
-      avoid: "避免一次堆叠过多视觉信息，也避免使用与学习目标无关的装饰性图片或缺少标注的复杂图表。",
-    },
-    verbal: {
-      suitable: "优先使用简洁的书面说明、口头讲解、定义和总结，并通过复述或自我解释帮助巩固理解。",
-      avoid: "避免只提供图示而没有语言解释，也避免连续呈现缺少结构的大段文字或长时间讲述。",
-    },
-  };
-  const rules = [
-    decisionRules[decisionTone],
-    organizationRules[organizationTone],
-    representationRules[representationTone],
-  ];
+function strategyList(items) {
+  return `<ul class="strategy-list">${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+}
 
+function composeLearningPlan(decisionTone, organizationTone, representationTone) {
+  const rules = [
+    learningStrategyLibrary[decisionTone],
+    learningStrategyLibrary[organizationTone],
+    learningStrategyLibrary[representationTone],
+  ];
+  const sourceIds = [...new Set([...rules.flatMap((rule) => rule.sourceIds), "fiorella", "pashler"])];
   return {
-    suitable: rules.map((rule) => rule.suitable).join(" "),
-    avoid: rules.map((rule) => rule.avoid).join(" "),
+    rules,
+    sourceIds,
+    avoid: rules.flatMap((rule) => rule.avoid),
+    flow: [
+      { number: "01", label: "学习前", title: "建立方向", items: rules.map((rule) => rule.before) },
+      { number: "02", label: "学习中", title: "主动加工", items: rules.map((rule) => rule.during) },
+      { number: "03", label: "学习后", title: "生成与检验", items: rules.map((rule) => rule.after) },
+    ],
   };
 }
 
-function teachingGuidancePanels(strategy) {
+function learningPlanSections(plan) {
+  const strategyCards = plan.rules
+    .map(
+      (rule, index) => `
+        <article class="strategy-card">
+          <div class="strategy-card-heading">
+            <span class="strategy-number" aria-hidden="true">0${index + 1}</span>
+            <div>
+              <span>${rule.dimension}</span>
+              <h3>${rule.title}</h3>
+            </div>
+          </div>
+          <p>${rule.summary}</p>
+          ${strategyList(rule.actions)}
+        </article>
+      `,
+    )
+    .join("");
+  const flowCards = plan.flow
+    .map(
+      (phase) => `
+        <article class="flow-card">
+          <span class="flow-number" aria-hidden="true">${phase.number}</span>
+          <p>${phase.label}</p>
+          <h3>${phase.title}</h3>
+          ${strategyList(phase.items)}
+        </article>
+      `,
+    )
+    .join("");
+  const resourceCards = plan.rules
+    .map(
+      (rule) => `
+        <article class="resource-rule-card">
+          <span>${rule.dimension}</span>
+          <h3>${rule.title}</h3>
+          ${strategyList(rule.resources)}
+        </article>
+      `,
+    )
+    .join("");
+  const references = plan.sourceIds
+    .map((sourceId) => learningStrategyReferences[sourceId])
+    .filter(Boolean)
+    .map(
+      (source) => `
+        <li>
+          <a href="${source.url}" target="_blank" rel="noreferrer">${source.citation}</a>
+          <span>${source.note}</span>
+        </li>
+      `,
+    )
+    .join("");
+
   return `
-    <div class="teaching-guidance" aria-label="长期教学建议">
-      <article class="guidance-panel guidance-panel--suitable">
-        <span class="guidance-index" aria-hidden="true">01</span>
+    <section class="result-section" aria-labelledby="core-strategies-title">
+      <div class="section-heading">
+        <p class="eyebrow">从测评结果到可执行行为</p>
+        <h2 id="core-strategies-title">你的核心学习策略</h2>
+        <p>以下不是单纯的呈现偏好，而是你在学习过程中可以主动执行的具体动作。</p>
+      </div>
+      <div class="strategy-card-grid">${strategyCards}</div>
+    </section>
+
+    <section class="result-section" aria-labelledby="learning-flow-title">
+      <div class="section-heading">
+        <p class="eyebrow">贯穿一次完整学习</p>
+        <h2 id="learning-flow-title">推荐学习流程</h2>
+        <p>将三个维度的策略分别嵌入学习前、学习中和学习后的关键阶段。</p>
+      </div>
+      <div class="learning-flow">${flowCards}</div>
+    </section>
+
+    <section class="result-section resource-section" aria-labelledby="resource-rules-title">
+      <div class="section-heading">
+        <p class="eyebrow">由策略驱动资源，而不是只改变外观</p>
+        <h2 id="resource-rules-title">AI 生成式学习资源规则</h2>
+        <p>今后生成讲解、PPT、视频和练习时，应把这些规则作为默认提示条件。</p>
+      </div>
+      <div class="resource-rule-grid">${resourceCards}</div>
+      <div class="generative-principle">
+        <strong>所有资源都应包含至少一种生成式学习活动</strong>
+        <p>不能只让学生观看或阅读；应要求学生进行总结、补全概念图、绘图、自我测试、自我解释或教回式复述，并提供相应反馈。</p>
+      </div>
+    </section>
+
+    <section class="result-section" aria-labelledby="avoid-title">
+      <div class="avoid-strategy-panel">
         <div>
-          <p class="guidance-kicker">今后默认沿用</p>
-          <h2>更适合的教学与学习方式</h2>
-          <p>${strategy.suitable}</p>
+          <p class="eyebrow">设计时持续检查</p>
+          <h2 id="avoid-title">需要避免</h2>
         </div>
-      </article>
-      <article class="guidance-panel guidance-panel--avoid">
-        <span class="guidance-index" aria-hidden="true">02</span>
-        <div>
-          <p class="guidance-kicker">设计时持续检查</p>
-          <h2>需要避免</h2>
-          <p>${strategy.avoid}</p>
-        </div>
-      </article>
-    </div>
+        ${strategyList(plan.avoid)}
+      </div>
+    </section>
+
+    <section class="evidence-section" aria-labelledby="evidence-title">
+      <div class="section-heading">
+        <p class="eyebrow">策略来源与解释边界</p>
+        <h2 id="evidence-title">主要文献依据</h2>
+        <p>整体—序列和视觉—言语策略主要来自量表作者的建议；沉思—冲动的训练研究多以儿童为样本，迁移到大学生 AI 教学属于有理论依据、仍需实验验证的设计。</p>
+      </div>
+      <ol class="evidence-list">${references}</ol>
+      <p class="evidence-boundary">本结果描述学习偏好与加工倾向，不是固定能力标签，也不代表只允许使用一种教学形式。系统强调相应支架，同时保留图文结合与多种学习活动。</p>
+    </section>
   `;
 }
 
@@ -769,13 +1050,13 @@ function renderCombinedSummary() {
       ${combinedDimensionItem(3, "信息表征", visualVerbalProfile, `${visualVerbalProfile.description} 偏好强度：${visualVerbalSummary.strength}。`)}
     </div>
   `;
+  const learningPlan = composeLearningPlan(
+    mfftProfile.tone,
+    ilsProfile.tone,
+    visualVerbalProfile.tone,
+  );
 
   if (!assessment.strategy) {
-    const extendedGuidance = composeExtendedGuidance(
-      mfftProfile.tone,
-      ilsProfile.tone,
-      visualVerbalProfile.tone,
-    );
     app.innerHTML = `
       <section class="screen narrow" aria-labelledby="combined-summary-title">
         <button class="breadcrumb-button" id="backToOverviewButton" type="button">返回测评概览</button>
@@ -796,11 +1077,11 @@ function renderCombinedSummary() {
 
         ${dimensionItems}
 
-        ${teachingGuidancePanels(extendedGuidance)}
+        ${learningPlanSections(learningPlan)}
 
         <div class="continuity-note">
           <strong>长期使用说明</strong>
-          <p>“更适合的教学与学习方式”和“需要避免”将作为后续 AI 讲解、课程材料、PPT 和学习视频的默认条件持续沿用，同时可根据具体课程任务进行必要调整。</p>
+          <p>上述学习策略与资源规则将作为后续 AI 讲解、课程材料、PPT 和学习视频的默认条件持续沿用，同时可根据具体课程任务进行必要调整。</p>
         </div>
 
         <div class="interpretation-note">
@@ -845,11 +1126,11 @@ function renderCombinedSummary() {
 
       ${dimensionItems}
 
-      ${teachingGuidancePanels(strategy)}
+      ${learningPlanSections(learningPlan)}
 
       <div class="continuity-note">
         <strong>长期使用说明</strong>
-        <p>这两项将作为后续 AI 教学的默认条件持续沿用，但不是固定能力标签。当课程内容或具体任务有特殊要求时，可以在保留核心偏好的基础上补充其他呈现方式。</p>
+        <p>上述学习策略与资源规则将作为后续 AI 教学的默认条件持续沿用，但不是固定能力标签。当课程内容或具体任务有特殊要求时，可以在保留核心偏好的基础上补充其他呈现方式。</p>
       </div>
 
       <div class="results-actions">
