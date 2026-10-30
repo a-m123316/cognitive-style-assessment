@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="面向大学生的认知风格测评研究原型，包含沉思-冲动、整体-序列和言语-视觉三个维度。"
+    />
+    <title>认知风格测评</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <button class="brand" id="homeButton" type="button" aria-label="返回测评概览">
+          <span class="brand-mark" aria-hidden="true">认</span>
+          <span class="brand-copy">
+            <strong>认知风格测评</strong>
+            <small>大学生版研究原型</small>
+          </span>
+        </button>
+        <button class="text-button" id="sourceButton" type="button">测评依据</button>
+      </header>
+
+      <main id="app" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <span>研究用途</span>
+        <span>不采集姓名、学号等身份信息</span>
+      </footer>
+    </div>
+
+    <dialog class="source-dialog" id="sourceDialog">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">研究原型</p>
+          <h2>测评依据与版本说明</h2>
+        </div>
+        <button class="icon-button" id="closeSourceButton" type="button" aria-label="关闭">×</button>
+      </div>
+      <section class="source-section" aria-labelledby="mfft-source-title">
+        <p class="eyebrow">板块一 · 沉思—冲动</p>
+        <h3 id="mfft-source-title">MFFT-2021</h3>
+        <p>
+          采用公开刺激材料与核心实验程序：2道练习题、20道正式题，并记录首次反应时间和错误次数。
+        </p>
+        <dl class="source-list">
+          <div>
+            <dt>主要文献</dt>
+            <dd>Viator, Wu, &amp; Viator (2022), <em>Frontiers in Psychology</em>, 13, 977808.</dd>
+          </div>
+          <div>
+            <dt>结果解释</dt>
+            <dd>当前暂用已发表大学生样本均值，正式研究应替换为目标样本常模。</dd>
+          </div>
+        </dl>
+        <a href="https://doi.org/10.3389/fpsyg.2022.977808" target="_blank" rel="noreferrer">查看MFFT-2021论文</a>
+      </section>
+
+      <section class="source-section" aria-labelledby="ils-source-title">
+        <p class="eyebrow">板块二 · 整体—序列</p>
+        <h3 id="ils-source-title">ILS 序列—整体分量表</h3>
+        <p>
+          保留原分量表11个题项的语义对立、强制二选一与差值计分结构，并以3个大学学习情境重新组织中文表述。
+        </p>
+        <dl class="source-list">
+          <div>
+            <dt>量表来源</dt>
+            <dd>Felder &amp; Soloman, <em>Index of Learning Styles</em>，原题号4、8、12、16、20、24、28、32、36、40、44。</dd>
+          </div>
+          <div>
+            <dt>版本边界</dt>
+            <dd>当前页面属于中文情境化改编版，不是经过独立验证的官方中文版；正式应用前需进行翻译回译、专家评审和样本验证。</dd>
+          </div>
+        </dl>
+        <div class="source-links">
+          <a href="https://learningstyles.webtools.ncsu.edu/" target="_blank" rel="noreferrer">查看官方ILS</a>
+          <a href="https://doi.org/10.1002/j.2168-9830.2007.tb00941.x" target="_blank" rel="noreferrer">查看效度研究</a>
+        </div>
+      </section>
+
+      <section class="source-section" aria-labelledby="vv-source-title">
+        <p class="eyebrow">板块三 · 言语—视觉</p>
+        <h3 id="vv-source-title">ILS 视觉—言语分量表</h3>
+        <p>
+          保留原分量表11个题项的语义方向、强制二选一与差值计分结构，并以3个大学学习和生活情境重新组织中文表述。
+        </p>
+        <dl class="source-list">
+          <div>
+            <dt>量表来源</dt>
+            <dd>Felder &amp; Soloman, <em>Index of Learning Styles</em>，原题号3、7、11、15、19、23、27、31、35、39、43。</dd>
+          </div>
+          <div>
+            <dt>测量边界</dt>
+            <dd>测量视觉与言语呈现偏好，不测量语言能力、空间能力或图形推理能力。原量表第39题的因子载荷较弱，当前为保持11题结构而保留。</dd>
+          </div>
+          <div>
+            <dt>版本边界</dt>
+            <dd>当前页面属于中文情境化改编版，不是经过独立验证的官方中文版；正式应用前需进行翻译回译、专家评审和样本验证。</dd>
+          </div>
+        </dl>
+        <div class="source-links">
+          <a href="https://doi.org/10.52731/iee.v1.i3.38" target="_blank" rel="noreferrer">查看普通话版验证</a>
+          <a href="https://doi.org/10.1037/0022-0663.95.4.833" target="_blank" rel="noreferrer">查看构念区分研究</a>
+        </div>
+      </section>
+    </dialog>
+
+    <dialog class="confirm-dialog" id="confirmDialog">
+      <h2 id="confirmTitle">重新开始本板块？</h2>
+      <p id="confirmMessage">当前作答记录将被清空，页面会返回板块说明。</p>
+      <div class="dialog-actions">
+        <button class="secondary-button" id="cancelResetButton" type="button">取消</button>
+        <button class="danger-button" id="confirmResetButton" type="button">清空并重新开始</button>
+      </div>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
